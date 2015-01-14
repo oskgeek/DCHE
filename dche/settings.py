@@ -10,11 +10,19 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os.path import abspath, dirname, join
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+from django.contrib import messages
+
+    
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_ROOT = abspath(dirname(__file__))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+STATIC_ROOT = join(PROJECT_ROOT, '../static/')
+MEDIA_ROOT = join(PROJECT_ROOT, '../media/')
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'b4%_7--z5nsq4p2w(ju81m!q8_lwho=2kdp)!j2_x$nc2t9#c^'
@@ -23,6 +31,17 @@ SECRET_KEY = 'b4%_7--z5nsq4p2w(ju81m!q8_lwho=2kdp)!j2_x$nc2t9#c^'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
+    "django.core.context_processors.media",
+)
+
+MESSAGE_TAGS = {
+                messages.SUCCESS: 'alert-success success',
+                messages.WARNING: 'alert-warning warning',
+                messages.ERROR: 'alert-danger error'
+}
 
 ALLOWED_HOSTS = []
 
@@ -47,6 +66,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
 ROOT_URLCONF = 'dche.urls'
@@ -77,8 +101,3 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-STATIC_URL = '/static/'
