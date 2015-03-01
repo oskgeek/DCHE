@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCHE - Directorate of Central Health Establishment</title>
+    <title>Directorate of Central Health Establishment - DCHE</title>
 
     <!-- Bootstrap Core CSS -->
     <link href='{% static "frontend/css/bootstrap.min.css" %}' rel="stylesheet">
@@ -49,68 +49,49 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="services.html">Services</a>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">Air Ports</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">Sea Ports</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">Health Checkposts</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">Civil Surgeon</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Other Services</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                                <a href="portfolio-item.html">News</a>
                             </li>
                             <li>
-                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                                <a href="portfolio-item.html">Photos</a>
                             </li>
                             <li>
-                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                                <a href="portfolio-item.html">Videos</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li>
-                                <a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li>
-                                <a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                            <li>
-                                <a href="pricing.html">Pricing Table</a>
-                            </li>
-                        </ul>
-                    </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -130,13 +111,13 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('{% static 'frontend/images/slider1.jpg' %}');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 1</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="fill" style="background-image:url('{% static 'frontend/images/slider2.jpg' %}');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 2</h2>
                 </div>
@@ -160,14 +141,62 @@
 
     <!-- Page Content -->
     <div class="container">
+        
 
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">
-                    Directorate of Central Health Establishment ( DCHE )
-                </h1>
+                <div class="row-fluid">
+                    <div class="span4" style="text-align:center;">
+                        <img width="200px" height="200px" src="{% static 'frontend/images/logo.jpg' %}" alt="">
+                    </div>
+                    <div class="span8" style="text-align:center;">
+                        <h2>Welcome to Directorate of Central Health Establishment ( DCHE )</h2>
+                    </div>
+                </div>
             </div>
+            <div class="col-lg-12">
+                <hr><br>
+                </div>
+                    <div class="col-lg-12">
+                             <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="portfolio-item.html">
+                                        <img width="200px" height="250px" class="img-responsive img-portfolio img-hover" src="{% static 'frontend/images/saira_afzal.jpg' %}" alt="">
+                                        
+                                        <h3>Mrs. Saira Afzal Tarar</h3>
+                                        <h4>State Minister - Ministry of National Health Services, Regulation and Coordination</h4>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="portfolio-item.html">
+                                        
+                                        <img height="180px" width="220px" class="img-responsive img-portfolio img-hover" src="{% static 'frontend/images/ayub_sheikh.jpg' %}" alt="">
+                                        <h3>Mr. Ayub Sheikh</h3>
+                                        <h4>Secretary - Ministry of National Health Services, Regulation and Coordination</h4>
+                                    </a>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="portfolio-item.html">
+                                        <img height="100px" width="165px" class="img-responsive img-portfolio img-hover" src="{% static 'frontend/images/asad_hafeez.jpg' %}" alt="">
+                                        <h3>Mr. Asad Hafeez</h3>
+                                        <h4>Director General - Ministry of National Health Services, Regulation and Coordination</h4>
+                                    </a>
+                                </div>            
+                                <div class="col-md-3 col-sm-6">
+                                    <a href="portfolio-item.html">
+                                        <img height="100px" width="165px" class="img-responsive img-portfolio img-hover" src="{% static 'frontend/images/asad_hafeez.jpg' %}" alt="">
+                                        <h3>Dr. Muhammad M.Bugti</h3>
+                                        <h4>Director - Ministry of National Health Services, Regulation and Coordination</h4>
+                                    </a>
+                                </div>            
+                </div>
+                <!-- /.row -->
+            </div>
+            <div class="col-lg-12">
+                <hr><br>
+                </div>
+            
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -203,44 +232,6 @@
                         <a href="#" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Portfolio Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">DCHE's Board of Directors</h2>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
             </div>
         </div>
         <!-- /.row -->
